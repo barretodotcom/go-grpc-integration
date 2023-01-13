@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package="./pb";
+
+service User {
+    rpc RegisterUser (UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest {
+    string name = 1;
+    string email = 2;
+    string password = 3; 
+}
+
+message UserResponse {
+    bool sucess = 1;
+    string message = 2;
+}

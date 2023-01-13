@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    container_name: mongo_db_grpc
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=docker
+      - MONGO_INITDB_ROOT_PASSWORD=mongodb
